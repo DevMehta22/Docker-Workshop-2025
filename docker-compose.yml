@@ -10,9 +10,10 @@ services:
 
   backend:
     container_name: backend
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
+    # build: 
+    #   context: ./backend
+    #   dockerfile: Dockerfile
+    image: devmehta22/docker-full-stack-backend
     ports:
       - 4000:4000
     env_file:
@@ -22,9 +23,10 @@ services:
     
   frontend:
     container_name: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    # build:
+    #   context: ./frontend
+    #   dockerfile: Dockerfile
+    image: devmehta22/docker-full-stack-frontend
     ports:
       - 3000:3000
     depends_on:
